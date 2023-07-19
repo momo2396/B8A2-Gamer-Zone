@@ -10,7 +10,7 @@
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
   padding: 29px 0;
@@ -26,11 +26,15 @@ nav {
   color: var(--title-color);
   font-size: 45px;
   font-weight: 700;
+  width: 50%;
 }
+/* .nav-left img {
+  width: 50%;
+} */
 .nav-right {
   padding-right: 10.5%;
   display: flex;
-  justify-content: space-between;
+  gap: 5%;
   align-items: center;
   width: 50%;
 }
@@ -55,10 +59,7 @@ nav {
   padding: 10px 20px;
   border: 0;
 }
-main {
-  max-width: 1920px;
-  margin: 0 auto;
-}
+
 .first-sec {
   display: flex;
   align-items: center;
@@ -119,7 +120,7 @@ main {
 }
 .online-game-sec {
   padding: 10% 10.5%;
-  padding-bottom: 0;
+  padding-bottom: 2%;
 }
 .online-game-sec .first {
   text-align: center;
@@ -152,6 +153,63 @@ main {
   font-weight: 500;
   line-height: 30px;
 }
+.play-game-sec {
+  padding: 10%;
+}
+.upp {
+  padding-top: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 113px;
+}
+.play-game-sec .first {
+  width: 50%;
+}
+.play-game-sec .first .firstimg {
+  width: 100%;
+  max-width: 710px;
+}
+.play-game-sec .first .secondimg {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  z-index: 2;
+  right: -180px;
+  top: -30px;
+}
+.play-game-sec .second {
+  width: 50%;
+}
+.buttonicon-sec {
+  padding: 10% 10.5%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.element {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px;
+  border: 0;
+  border-radius: 50px;
+  background: #fff;
+}
+.element p {
+  color: #0b0223;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  padding-left: 10px;
+}
 @media screen and (max-width: 576px) {
   nav {
     flex-direction: column;
@@ -159,7 +217,9 @@ main {
     box-shadow: none;
     padding: 0 0;
   }
-
+  .nav-left h2 {
+    font-size: 30px;
+  }
   .nav-right {
     flex-direction: column;
     align-items: center;
@@ -180,14 +240,16 @@ main {
     width: 100%;
   }
   .first-sec-left {
-    /* text-align: center; */
-    padding-top: 20px;
+    padding-top: 40px;
     width: 100%;
   }
-  .first-sec-left > h1 {
-    /* font-size: 20px; */
+  .first-sec-left h1 {
+    font-size: 30px;
   }
-  .first-sec-left > h2 {
-    /* font-size: 50px; */
+  .first-sec-left h2 {
+    font-size: 50px;
+  }
+  .online-game-sec .second {
+    flex-direction: column;
   }
 }

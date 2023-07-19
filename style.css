@@ -366,6 +366,9 @@ footer i {
     width: 100%;
     gap: 20px;
   }
+  .watch-now {
+    height: calc(100% - 17%);
+  }
   .nav-right > ul {
     flex-direction: column;
     align-items: center;
@@ -492,6 +495,9 @@ footer i {
   }
   .online-game-sec {
     padding: 5%;
+  }
+  .watch-now {
+    height: calc(100% - 48%);
   }
   .buttonicon-sec {
     padding: 5%;

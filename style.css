@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Work Sans;
+  font-family: "Montserrat", sans-serif;
 }
 :root {
   --title-color: #0b0223;
@@ -11,7 +13,6 @@
 nav {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
   padding: 29px 0;
 }
@@ -19,30 +20,28 @@ nav {
   display: flex;
   gap: 5px;
   align-items: center;
-  width: 50%;
   padding-left: 10.5%;
 }
 .nav-left > h2 {
   color: var(--title-color);
   font-size: 45px;
   font-weight: 700;
-  width: 50%;
 }
-/* .nav-left img {
-  width: 50%;
-} */
 .nav-right {
   padding-right: 10.5%;
   display: flex;
   gap: 5%;
   align-items: center;
+  justify-content: space-between;
   width: 50%;
+  max-width: 500px;
 }
 .nav-right > ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 .nav-right > ul > li > a {
   text-decoration: none;
@@ -66,7 +65,7 @@ nav {
   background-image: url("images/Group\ 14.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0 10.5%;
+  padding: 2% 10.5%;
 }
 .first-sec-left {
   width: 50%;
@@ -99,11 +98,12 @@ nav {
   display: inline-flex;
   padding-top: 5%;
   gap: 10px;
+  align-items: center;
 }
 #f-banner-btn {
   border-radius: 48px;
   background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
-  padding: 15px 20px;
+  padding: 15px 30px;
   border: 0;
   color: white;
   font-size: 20px;
@@ -112,7 +112,7 @@ nav {
 #s-banner-btn {
   border-radius: 48px;
   background: #4ec5f7;
-  padding: 15px 20px;
+  padding: 15px 30px;
   border: 0;
   color: white;
   font-size: 20px;
@@ -135,7 +135,6 @@ nav {
   color: var(--paragraph-color);
   font-size: 18px;
   font-weight: 400;
-  line-height: 30px;
   padding-bottom: 45px;
 }
 .online-game-sec .second {
@@ -143,44 +142,56 @@ nav {
   width: 100%;
   gap: 20px;
 }
-.online-game-sec .second .card img {
+.card img {
   width: 100%;
 }
-.online-game-sec .second .card p {
+.card img:hover + .watch-now {
+  display: block;
+}
+.watch-now {
+  display: none;
+  opacity: 0.2;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  /* z-index: 50; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card p {
   padding: 10px;
   color: var(--paragraph-color);
   font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
 }
-.play-game-sec {
-  padding: 10%;
-}
-.upp {
-  padding-top: 10%;
-  width: 100%;
+.play-games {
   display: flex;
+  padding: 10% 10.5%;
+  justify-content: center;
   align-items: center;
-  gap: 113px;
+  gap: 5%;
+  width: 79%;
 }
-.play-game-sec .first {
-  width: 50%;
-}
-.play-game-sec .first .firstimg {
-  width: 100%;
-  max-width: 710px;
-}
-.play-game-sec .first .secondimg {
-  width: 50%;
+.play-games-left {
   position: relative;
-  display: flex;
-  justify-content: right;
-  z-index: 2;
-  right: -180px;
-  top: -30px;
+  width: 55%;
 }
-.play-game-sec .second {
-  width: 50%;
+.large {
+  width: 80%;
+}
+.small {
+  width: 40%;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  z-index: 50;
+}
+.play-games-right {
+  width: 45%;
 }
 .buttonicon-sec {
   padding: 10% 10.5%;
@@ -190,9 +201,9 @@ nav {
     rgba(255, 66, 165, 0.03) 100%
   );
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 5%;
 }
 .element {
   display: flex;
@@ -202,20 +213,78 @@ nav {
   border: 0;
   border-radius: 50px;
   background: #fff;
+  width: 16%;
+  margin-bottom: 10px;
 }
 .element p {
   color: #0b0223;
   font-size: 20px;
   font-weight: 600;
-  line-height: normal;
   padding-left: 10px;
+}
+footer {
+  padding: 10% 10.5%;
+  text-align: center;
+  background-color: #0b0223;
+}
+.head1 {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.head1 p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.head2 {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.head2 p,
+footer .copy-right {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+}
+.logo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.logo button {
+  padding: 0;
+  border-radius: 1000px;
+  background-color: #0b0223;
+  border: 0;
+}
+footer i {
+  font-size: 50px;
+  color: white;
+}
+.footer-logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  color: white;
 }
 @media screen and (max-width: 576px) {
   nav {
     flex-direction: column;
     align-items: center;
     box-shadow: none;
-    padding: 0 0;
+    gap: 20px;
+  }
+  .nav-left {
+    padding-left: 0;
+  }
+  .nav-right {
+    padding-right: 0;
   }
   .nav-left h2 {
     font-size: 30px;
@@ -230,10 +299,12 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 20px;
   }
   .first-sec {
+    background-position: bottom;
     flex-direction: column-reverse;
-    background-image: none;
+    padding: 5%;
   }
   .first-sec-right {
     padding-top: 40px;
@@ -241,9 +312,20 @@ nav {
   }
   .first-sec-left {
     padding-top: 40px;
-    width: 100%;
+    width: fit-content;
   }
-  .first-sec-left h1 {
+  .online-game-sec {
+    padding: 5%;
+  }
+  .first-sec-left p,
+  .online-game-sec .first p,
+  .online-game-sec .second .card p,
+  #s-banner-btn,
+  #f-banner-btn {
+    font-size: 16px;
+  }
+  .first-sec-left h1,
+  .online-game-sec .first h2 {
     font-size: 30px;
   }
   .first-sec-left h2 {
@@ -251,5 +333,83 @@ nav {
   }
   .online-game-sec .second {
     flex-direction: column;
+  }
+  .buttonicon-sec {
+    display: grid;
+    padding: 5%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .element {
+    padding: 5px;
+    width: 100%;
+  }
+  .element p {
+    font-size: 10px;
+    padding: 2px;
+  }
+  .element img {
+    width: 30%;
+  }
+  footer {
+    padding: 5%;
+  }
+  .head1 {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 200px;
+    margin: 20px auto;
+  }
+  .head1 p {
+    font-size: 12px;
+  }
+  footer i {
+    font-size: 30px;
+  }
+  .play-games {
+    flex-direction: column;
+    padding: 5%;
+    width: 90%;
+  }
+  .play-games-left {
+    width: 100%;
+  }
+  .play-games-right {
+    width: 100%;
+    margin-top: 30%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 800px) {
+  .nav-left {
+    padding-left: 2%;
+  }
+  .nav-right {
+    padding-right: 2%;
+  }
+  .first-sec {
+    padding: 5%;
+  }
+  .first-sec-left h1 {
+    font-size: 40px;
+  }
+  .first-sec-left h2 {
+    font-size: 60px;
+  }
+  .online-game-sec {
+    padding: 5%;
+  }
+  .buttonicon-sec {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .element {
+    width: 100%;
   }
 }

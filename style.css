@@ -18,7 +18,7 @@ nav {
 }
 .nav-left {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
   padding-left: 10.5%;
 }
@@ -57,6 +57,9 @@ nav {
   background: rgba(11, 2, 35, 0.1);
   padding: 10px 20px;
   border: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .first-sec {
@@ -138,42 +141,10 @@ nav {
   padding-bottom: 45px;
 }
 .online-game-sec .second {
-  display: flex;
-  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-/* .card {
-  position: relative;
-  cursor: pointer;
-}
-.card:hover .watch-now {
-  opacity: 1;
-}
-.watch-now {
-  /* display: none;
-  opacity: 0.2;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: black;
-  width: 100%;
-  height: 100%; 
-  /* top: 10px;
-  left: 10px; 
-  width: calc(100% - 10px);
-  height: calc(100% - 92px);
-  border: 5px solid #f948b2;
-  border-radius: 16px;
-  position: absolute;
-  display: flex;
-  opacity: 0;
-  transition: opacity 1s;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 16px;
-  background-color: rgba(0, 0, 0, 0.6);
-} */
 .card img {
   width: 100%;
 }
@@ -183,11 +154,11 @@ nav {
   /* row-gap: 24px; */
   position: relative;
   cursor: pointer;
+  width: 100%;
 }
-
 .watch-now {
   width: calc(100% - 10px);
-  height: calc(100% - 20%);
+  height: calc(100% - 10px);
   border: 5px solid #f948b2;
   border-radius: 16px;
   position: absolute;
@@ -199,6 +170,7 @@ nav {
   align-items: center;
   row-gap: 16px;
   background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
 }
 
 .watch-now h3 {
@@ -209,10 +181,11 @@ nav {
   opacity: 1;
 }
 .card p {
-  padding: 10px;
+  padding-top: 10px;
   color: var(--paragraph-color);
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
 }
 .play-games {
   display: flex;
@@ -337,7 +310,7 @@ footer i {
 }
 .footer-logo {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   margin: 20px;
@@ -365,9 +338,6 @@ footer i {
     width: 100%;
     gap: 20px;
   }
-  /* .watch-now {
-    height: calc(100% - 20%);
-  } */
   .nav-right > ul {
     flex-direction: column;
     align-items: center;
@@ -410,7 +380,7 @@ footer i {
     font-size: 50px;
   }
   .online-game-sec .second {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
   .buttonicon-sec {
     margin-top: 20px;
@@ -476,12 +446,18 @@ footer i {
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
   .nav-left {
     padding-left: 2%;
   }
   .nav-right {
     padding-right: 2%;
-    width: 50%;
+    width: 100%;
   }
   .first-sec {
     padding: 5%;
@@ -494,6 +470,9 @@ footer i {
   }
   .online-game-sec {
     padding: 5%;
+  }
+  .online-game-sec .second {
+    grid-template-columns: repeat(2, 1fr);
   }
   .buttonicon-sec {
     padding: 5%;
